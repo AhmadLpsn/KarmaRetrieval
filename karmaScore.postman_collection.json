@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "f8908f0e-5b67-4065-bc3c-51fd9931146c",
+		"name": "karmaScore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserScore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/:user_id/rank/?num_of_ranks=3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						":user_id",
+						"rank",
+						""
+					],
+					"query": [
+						{
+							"key": "num_of_ranks",
+							"value": "3"
+						}
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/:user_id/rank/?num_of_ranks=3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":user_id",
+								"rank",
+								""
+							],
+							"query": [
+								{
+									"key": "num_of_ranks",
+									"value": "3"
+								}
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "495"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ef-E1+tkgSPGY51w8yXlUJnheKmNtI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Apr 2022 05:23:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 197254,\n            \"username\": \"user197253\",\n            \"rk\": \"58342\",\n            \"karmaScore\": 7085,\n            \"image\": \"img3.jpg\"\n        },\n        {\n            \"id\": 37946,\n            \"username\": \"user37945\",\n            \"rk\": \"58343\",\n            \"karmaScore\": 7085,\n            \"image\": \"img0.jpg\"\n        },\n        {\n            \"id\": 29548,\n            \"username\": \"user29547\",\n            \"rk\": \"58344\",\n            \"karmaScore\": 7085,\n            \"image\": \"img2.jpg\"\n        },\n        {\n            \"id\": 1,\n            \"username\": \"user0\",\n            \"rk\": \"58345\",\n            \"karmaScore\": 7085,\n            \"image\": \"img0.jpg\"\n        },\n        {\n            \"id\": 19881,\n            \"username\": \"user19880\",\n            \"rk\": \"58346\",\n            \"karmaScore\": 7085,\n            \"image\": \"img0.jpg\"\n        }\n    ],\n    \"meta\": {\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"perPage\": 20,\n        \"total\": 3\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "{{host}}/api",
+			"type": "string"
+		}
+	]
+}
