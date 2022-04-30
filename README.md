@@ -4,13 +4,14 @@
  - [Node.js](https://nodejs.org/en/) 18
 
 **Installation**
+
 first install the requierd packages
    
 
      npm i
  then add `.env` file to the root of the project directory,
  you can clone it from `.env.bak`
- inside `.env` file you have to set our database configrations and seeds size `DB_SEED_SIZE`
+ inside `.env` file you have to set our database configurations and seeds size `DB_SEED_SIZE`
  then you have to build the project 
 
     npm run build
