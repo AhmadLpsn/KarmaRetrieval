@@ -20,6 +20,10 @@ then to seed your database run
 
     npm run seed
 
+if you want to test APIs run 
+
+    npm run test
+
 now feel free to run the project
 
     npm start	

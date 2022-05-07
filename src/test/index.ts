@@ -31,13 +31,16 @@ const userRankItem = Joi.object({
 })
 
 describe('get /api/users/:user_id/rank/', function () {
+    before(async function () {
+        await getApp();
+    })
     it('respond with valid HTTP status code and pagenated results', async function () {
         const app = await getApp()
 
         const response = await supertest(app).get('/api/users/1/rank/')
 
         expect(response.status).toBe(200);
-        
+
         const resultSheama = pagenatedResult(userRankItem).validate(response.body)
 
         expect(resultSheama.error).toBe(undefined)
