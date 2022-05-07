@@ -1,5 +1,5 @@
-import { logger } from "../helpers";
-import { AppDataSource } from "../repositories/dataSource";
+import { logger } from "../app/helpers";
+import { AppDataSource } from "../app/repositories/dataSource";
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 AppDataSource.initialize().then(async () => {

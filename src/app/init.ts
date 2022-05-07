@@ -5,8 +5,7 @@ import { port } from './config'
 import { AppDataSource } from './repositories/dataSource';
 import { router } from './router'
 
-console.log("starting")
-const start = async () => {
+export const init = async () => {
     await AppDataSource.initialize();
     await AppDataSource.query(`SET sql_mode = 'NO_UNSIGNED_SUBTRACTION';`)
     const App = express()
@@ -23,9 +22,11 @@ const start = async () => {
 
     App.use("/public", express.static('public'))
 
-    App.listen(port || 3000, () => {
-        logger.log(`Start listening to port ${port} ... `, 'Successfully Started');
-        console.log("___________success____________")
+    return await new Promise((res, rej) => {
+        App.listen(port || 3000, () => {
+            logger.log(`Start listening to port ${port} ... `, 'Successfully Started');
+            logger.log("___________success____________")
+            res(App);
+        })
     })
 }
-start().catch(err => console.log(err))

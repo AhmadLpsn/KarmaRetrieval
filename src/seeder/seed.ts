@@ -1,7 +1,7 @@
-import { } from '../config'
-import { logger } from "../helpers";
-import { AppDataSource } from "../repositories/dataSource";
-import { Image, User } from "../repositories/entities"
+import { } from '../app/config'
+import { logger } from "../app/helpers";
+import { AppDataSource } from "../app/repositories/dataSource";
+import { Image, User } from "../app/repositories/entities"
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 150000 --exit dist/test/index.js",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "dev": "tsc-watch --onSuccess \"npm start\" ",
-    "start": "node dist/index.js",
+    "start": "node dist/app/index.js",
     "drop": "node dist/seeder/drop.js",
     "seed": "npm run drop && node dist/seeder/seed.js"
   },
@@ -17,11 +17,16 @@
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
+    "@types/mocha": "^9.1.1",
+    "@types/supertest": "^2.0.12",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.3",
     "tsc-watch": "^5.0.3",
     "typescript": "^4.6.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "expect": "^28.1.0",
     "express": "^4.18.0",
     "joi": "^17.6.0",
     "mysql": "^2.18.1",
